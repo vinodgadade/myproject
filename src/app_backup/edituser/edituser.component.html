@@ -1,0 +1,24 @@
+<div class="container" >
+    <h1>Edit User</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">First name</label>
+        <input type="text" class="form-control" [(ngModel)]="user.firstname"  name="firstname" #firstname>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Lastname</label>
+        <input type="text" class="form-control"  [(ngModel)]="user.lastname"  name="lastname"  #lastname>
+      </div>
+      <button (click)=updateUser(firstname.value,lastname.value) type="button" class="btn btn-success">Update</button>
+      &nbsp;
+      <a [routerLink]="['/addUser']"><button class = 'btn btn-danger' >Back</button></a>
+    </form>
+    <br>
+    <div class="row" *ngIf = "successMsg"  >
+      <div class="col-xs-12">
+        <p class="alert alert-success">
+            <strong>User Updated Successfully!</strong>
+        </p>
+      </div>
+    </div>
+</div>

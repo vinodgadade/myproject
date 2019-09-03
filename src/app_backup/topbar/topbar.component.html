@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"  [ngClass] = "{'active':activeTab ==='dash'}" (click) = "search('dash')" >Angular</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li [ngClass]="{'active':activeTab==='addUser'}"><a (click) = "search('addUser')" > Home</a></li>
+            <li [ngClass]="{'active':activeTab==='firstanimation'}"><a (click) = "search('firstanimation')">Page 1</a></li>
+            <!-- <li><a routerLink = ''>Page 2</a></li> -->
+        </ul>
+    </div>
+</nav>

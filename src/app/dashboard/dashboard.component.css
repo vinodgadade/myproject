@@ -1,0 +1,14 @@
+ul.posts{
+    list-style: none;
+}
+ul > li {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    background-color: rgb(198, 175, 228);
+}
+.postedBy{
+    background-color:  rgb(198, 175, 228);
+    padding: 5px;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+    <a routerLink="['/addUser']"><button class = 'btn btn-success pull-right' >Add</button></a>
+<table style="width:80%;text-align:center" class="table table-striped">
+    <thead  class="thead-dark">
+        <th>Sr No</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th colspan="2">Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users index as i" >
+            <td>{{i+1}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <!-- a [routerLink]="['/edit', coin._id]"  -->
+            <td><a [routerLink]="['/edituser', user._id]" class = 'btn btn-default' >Edit</a></td>
+            <td><button class = 'btn btn-danger'>Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

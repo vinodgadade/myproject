@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"  [ngClass] = "{'active':activeTab ==='dash'}" (click) = "search('dash')" >Angular</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li [ngClass]="{'active':activeTab==='addUser'}"><a (click) = "search('addUser')" >Users</a></li>
+            <li [ngClass]="{'active':activeTab==='firstanimation'}"><a (click) = "search('firstanimation')">animation</a></li>
+        </ul>
+        <div>
+            <button class="navbar-brand pull-right" style="background: transparent;border:none" (click)='logOut()'>Log Out</button>
+        </div>
+    </div>
+</nav>

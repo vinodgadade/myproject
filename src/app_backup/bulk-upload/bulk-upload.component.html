@@ -1,0 +1,10 @@
+<form [formGroup] ="form1" (ngSubmit) = "SaveForm(form1.value)">
+<div class="form-group">  
+
+  <input id="myfile" class="form-control" type="file" name="file" (change)="postMethod($event.target.files)" required>
+</div>
+<div class="msg" *ngIf = "Message">{{Message}} </div>
+<div class="form-group">
+<button class="button btn btn-default" type="submit">Upload</button> 
+</div>
+</form>
